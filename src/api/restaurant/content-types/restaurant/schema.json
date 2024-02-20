@@ -4,7 +4,13 @@
   "info": {
     "singularName": "restaurant",
     "pluralName": "restaurants",
-    "displayName": "Restaurant"
+    "displayName": "Restaurant",
+    "defaultColumns": [
+      "Name",
+      "Description",
+      "categories"
+    ],
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,7 +23,7 @@
       "unique": true
     },
     "Description": {
-      "type": "blocks"
+      "type": "text"
     },
     "categories": {
       "type": "relation",

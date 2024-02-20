@@ -824,13 +824,15 @@ export interface ApiRestaurantRestaurant extends Schema.CollectionType {
     singularName: 'restaurant';
     pluralName: 'restaurants';
     displayName: 'Restaurant';
+    defaultColumns: ['Name', 'Description', 'categories'];
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     Name: Attribute.String & Attribute.Required & Attribute.Unique;
-    Description: Attribute.Blocks;
+    Description: Attribute.Text;
     categories: Attribute.Relation<
       'api::restaurant.restaurant',
       'manyToMany',
